@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kahve Siparişi - Soru 3</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Phudu:wght@500&family=Poppins:wght@500&family=Roboto:ital,wght@1,900&display=swap");
+      * {
+        font-family: "poppins", "sans-serif";
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("kahve.jpg");
+        background-size: cover;
+        background-position: center bottom;
+      }
+
+      #soru {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      #adres-bilgileri {
+        width: 300px;
+        text-align: center;
+        margin-top: 20px;
+      }
+
+      #il {
+        font-size: 18px;
+      }
+
+      #ilce {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      #tam-adres {
+        font-size: 18px;
+        margin-top: 10px;
+      }
+
+      .adres-input {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+      }
+
+      .cevap-button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      .cevap-button:hover {
+        background-color: #333;
+        color: #fff;
+      }
+      #imza {
+        width: 460px;
+        height: 200px;
+        background-image: url("imza.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 400px;
+        right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="imza"></div>
+    <div id="soru">Lütfen adres bilgilerinizi girin:</div>
+    <form class="cevap-form" action="odeme.html">
+      <div id="adres-bilgileri">
+        <select id="il" class="adres-input">
+          <option value="" selected disabled>İl Seçiniz</option>
+          <!-- Burada Türkiye'deki illeri listeleyebilirsiniz -->
+          <option value="Istanbul">İstanbul</option>
+          <option value="Ankara">Ankara</option>
+          <!-- Diğer illeri buraya ekleyin -->
+        </select>
+        <select id="ilce" class="adres-input">
+          <option value="Kadıköy" selected disabled>İlçe Seçiniz</option>
+          <!-- Burada seçilen ile göre ilçeleri listeleyebilirsiniz -->
+        </select>
+        <textarea
+          id="tam-adres"
+          class="adres-input"
+          placeholder="Tam Adres"
+        ></textarea>
+      </div>
+      <button type="submit" class="cevap-button">Cevapla</button>
+    </form>
+  </body>
+</html>

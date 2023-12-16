@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kahve Siparişi - Ödeme Bilgileri</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Phudu:wght@500&family=Poppins:wght@500&family=Roboto:ital,wght@1,900&display=swap");
+      * {
+        font-family: "poppins", "sans-serif";
+      }
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url("kahve.jpg");
+        background-size: cover;
+        background-position: center bottom;
+      }
+
+      #baslik {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+
+      .odeme-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .odeme-input {
+        font-size: 18px;
+        margin: 5px;
+      }
+
+      .odeme-button {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 10px;
+        border: 2px solid #333;
+        background-color: #fff;
+        cursor: pointer;
+      }
+
+      .odeme-button:hover {
+        background-color: #333;
+        color: #fff;
+      }
+      #imza {
+        width: 460px;
+        height: 200px;
+        background-image: url("imza.png");
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        bottom: 400px;
+        right: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="imza"></div>
+    <div id="baslik">Ödeme Bilgileri</div>
+    <form class="odeme-form">
+      <label for="kart-no">Kart Numarası:</label>
+      <input type="text" id="kart-no" class="odeme-input" required />
+
+      <label for="kart-isim">Kart İsim Soyisim:</label>
+      <input type="text" id="kart-isim" class="odeme-input" required />
+
+      <label for="son-kullanma">Son Kullanma Tarihi (AA/YY):</label>
+      <input type="text" id="son-kullanma" class="odeme-input" required />
+
+      <label for="cvv">CVV Kodu:</label>
+      <input type="text" id="cvv" class="odeme-input" required />
+
+      <button type="submit" class="odeme-button">Siparişi Tamamla</button>
+    </form>
+  </body>
+</html>
